@@ -12,14 +12,17 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Last Mile Delivery'),
+          title: const Text(
+            'Last Mile Delivery',
+            style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+          ),
           elevation: 1,
         ),
         body: Align(
           alignment: Alignment.topCenter,
           child: Padding(
             padding: const EdgeInsets.symmetric(
-              horizontal: 20,
+              horizontal: 16,
               vertical: 14.0,
             ),
             child: Column(
@@ -33,11 +36,11 @@ class HomeView extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   height: 150,
-                  width: 350,
+                  width: double.infinity,
                   child: Padding(
                     padding: const EdgeInsets.symmetric(
-                      horizontal: 14.0,
-                      vertical: 18.0,
+                      horizontal: 16.0,
+                      vertical: 14.0,
                     ),
                     child: Column(
                       spacing: 14,
@@ -174,13 +177,7 @@ class HomeView extends StatelessWidget {
                     // TODO: implement
                   },
                   tileColor: Colors.white,
-                  leading: Container(
-                    height: 40,
-                    width: 40,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: const Color.fromARGB(41, 124, 77, 255),
-                    ),
+                  leading: CircleAvatar(
                     child: Icon(Icons.directions_bike),
                   ),
                   title: Text(
@@ -197,13 +194,7 @@ class HomeView extends StatelessWidget {
                     // TODO: implement
                   },
                   tileColor: Colors.white,
-                  leading: Container(
-                    height: 40,
-                    width: 40,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: const Color.fromARGB(41, 124, 77, 255),
-                    ),
+                  leading: CircleAvatar(
                     child: Icon(Icons.person),
                   ),
                   title: Text(
@@ -217,7 +208,7 @@ class HomeView extends StatelessWidget {
                 ),
                 SizedBox(
                   height: 50,
-                  width: 350,
+                  width: double.infinity,
                   child: ElevatedButton.icon(
                     style: ElevatedButton.styleFrom(
                       elevation: 1,

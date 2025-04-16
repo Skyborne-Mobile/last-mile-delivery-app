@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 
 import 'package:last_mile_delivery/core/themes/app_theme.dart';
+import 'package:last_mile_delivery/features/admin/dashboard/dashboard_view.dart';
 
-import 'package:last_mile_delivery/features/customers/view/customers_view.dart';
+import 'package:last_mile_delivery/features/auth/view/login_view.dart';
 
-import 'package:last_mile_delivery/features/home/view/home_view.dart';
+import 'package:last_mile_delivery/features/agents/customers/view/customers_view.dart';
 
-import 'package:last_mile_delivery/features/settings/view/settings_view.dart';
+import 'package:last_mile_delivery/features/agents/home/view/home_view.dart';
+
+import 'package:last_mile_delivery/features/agents/settings/view/settings_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -60,7 +63,8 @@ class _MyAppState extends State<MyApp> {
       darkTheme: AppTheme.dark,
       theme: AppTheme.light,
       themeMode: ThemeMode.system,
-      home: _setScreen(),
+      // home: _setScreen(),
+      home: DashboardView(),
     );
   }
 }
